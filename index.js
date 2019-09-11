@@ -19,7 +19,7 @@ fastify.post('/', function (request, reply) {
 });
 
 // Run the server!
-fastify.listen(3000, '127.0.0.1', function (err) {
+fastify.listen(3000, '0.0.0.0', function (err) {
     if (err) throw err;
     console.log(`server listening on ${fastify.server.address().port}`)
 });
