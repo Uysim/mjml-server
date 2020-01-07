@@ -4,4 +4,4 @@ services:
     image: uysimty/mjml-server:latest
     build: .
     ports:
-      - 3000:3000
+      - 8321:3000

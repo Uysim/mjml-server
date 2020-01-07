@@ -7,7 +7,13 @@ fastify.post('/', function (request, reply) {
         return;
     }
 
-    let result = mjml(request.body.mjml);
+    let result = mjml(request.body.mjml, {
+        minify: true,
+        minifyOptions: {
+            collapseWhitespace: true,
+            minifyCSS: true
+        }
+    });
 
     if (Object.keys(result.errors).length) {
         Object.keys(result.errors).forEach((key) => {
